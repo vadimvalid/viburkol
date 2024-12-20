@@ -45,6 +45,7 @@ ul {
 
 p {
   margin-top: 0;
+  line-height: 1.5;
 }
 
 h1,
@@ -53,4 +54,29 @@ h3,
 h4,
 h5 {
   margin-top: 0;
+  color: variables.$mainColor;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$md;
+  padding: variables.$md variables.$xl3;
+  background: variables.$red;
+  border-radius: 56px;
+  box-shadow: -6px 6px 14px 0px rgba(0, 0, 0, 0.07) inset;
+  font-size: variables.$sm;
+  font-weight: variables.$extraBold;
+  line-height: 1.71;
+  color: variables.$white;
+  transition: all 0.3s ease;
+
+  span {
+    height: mixins.torem(22);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

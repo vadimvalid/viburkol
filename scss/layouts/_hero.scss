@@ -63,4 +63,26 @@
     background-size: contain;
     background-position: 100% 100%;
   }
+
+  @include mixins.sm-breakpoint {
+    padding: variables.$xl3 0;
+    border-radius: 0px 0px 32px 32px;
+
+    &__wrapper {
+      gap: variables.$xl3;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: mixins.torem(75);
+
+      span {
+        font-size: mixins.torem(54);
+      }
+    }
+
+    &:after {
+      display: none;
+    }
+  }
 }

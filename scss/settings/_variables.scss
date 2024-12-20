@@ -5,8 +5,15 @@ $black: #000;
 $grey: #e1e5e4;
 $white: #fff;
 $red: #ff6667;
-$green: #009a35;
 $yellow: #ffa319;
+$gradient: linear-gradient(
+  0deg,
+  #ffccbf 13.74%,
+  #ffbbb4 44.68%,
+  #feb2c4 64.86%,
+  #ffb3d7 85.48%,
+  #f5b3dc 97.95%
+);
 $gradient_2: linear-gradient(
   272deg,
   #ffe1da 0.97%,
@@ -21,6 +28,7 @@ $md: 1rem; // 16
 $lg: 1.125rem; // 18
 $xl: 1.5rem; // 24
 $xl2: 1.875rem; // 30
+$xl3: 2rem; // 32
 
 // Breakpoints
 $smBreakpoint: 767.98px;
