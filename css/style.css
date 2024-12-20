@@ -538,6 +538,29 @@ sup {
     background: none;
   }
 }
+.section.list h5 {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.section.list ol,
+.section.list li {
+  list-style-type: decimal;
+}
+.section.list ol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 1.25rem;
+}
+.section.list li {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+.section.list li a {
+  text-decoration: underline;
+  font-size: 0.75rem;
+}
 
 .schema__wrapper {
   position: relative;

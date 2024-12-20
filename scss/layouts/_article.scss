@@ -169,6 +169,36 @@
       background: none;
     }
   }
+
+  &.list {
+    h5 {
+      margin-bottom: variables.$md;
+      font-size: variables.$xs;
+      font-weight: variables.$medium;
+    }
+
+    ol,
+    li {
+      list-style-type: decimal;
+    }
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-left: mixins.torem(20);
+    }
+
+    li {
+      font-size: variables.$xs;
+      line-height: 1.4;
+
+      a {
+        text-decoration: underline;
+        font-size: variables.$xs;
+      }
+    }
+  }
 }
 
 .schema {
