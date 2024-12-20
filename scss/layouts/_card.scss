@@ -1,0 +1,52 @@
+@use "settings/_variables" as variables;
+@use "settings/_mixins" as mixins;
+
+.card {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: variables.$xl3;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: variables.$md;
+    padding: variables.$xl3;
+    border-radius: 56px;
+    background: variables.$gradient;
+    box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.06);
+    font-size: variables.$lg;
+    font-weight: variables.$medium;
+    line-height: 1.33;
+
+    h3 {
+      font-size: variables.$xl;
+      font-weight: variables.$bold;
+      line-height: 1;
+    }
+
+    .btn {
+      margin-top: variables.$md;
+    }
+  }
+
+  @include mixins.sm-breakpoint {
+    &__items {
+      grid-template-columns: 1fr;
+      gap: variables.$md;
+    }
+
+    &__item {
+      padding: variables.$md;
+      border-radius: 32px;
+      font-size: variables.$md;
+      line-height: 1.5;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

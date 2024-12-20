@@ -3,7 +3,7 @@
 
 .header {
   position: absolute;
-  top: mixins.torem(32);
+  top: variables.$xl3;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -20,7 +20,8 @@
     ul {
       display: flex;
       align-items: center;
-      gap: variables.$xl;
+      flex-wrap: wrap;
+      gap: mixins.torem(10) variables.$xl;
       padding: mixins.torem(11) mixins.torem(30);
       border-radius: 32px;
       background: variables.$gradient_2;
@@ -37,7 +38,28 @@
         &.active {
           font-weight: variables.$bold;
         }
+
+        &:last-child {
+          display: none;
+        }
       }
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: mixins.torem(28);
+    height: mixins.torem(22);
+
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: variables.$mainColor;
+      border-radius: 10px;
+      transform-origin: center;
+      transition: all 0.3s ease;
     }
   }
 
@@ -49,5 +71,84 @@
     font-size: variables.$sm;
     font-weight: variables.$bold;
     cursor: pointer;
+  }
+
+  @include mixins.sm-breakpoint {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: variables.$md 0;
+    transform: translateX(0);
+    background: linear-gradient(
+      272deg,
+      #ffe1da 0.97%,
+      #ffd3e8 43.25%,
+      #f5ddff 86.42%
+    );
+
+    nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: variables.$md;
+        border-radius: 0;
+        background: variables.$white;
+
+        li {
+          padding: variables.$md 0;
+          border-bottom: 1px solid variables.$yellow;
+          font-size: variables.$lg;
+          font-weight: variables.$medium;
+          line-height: 1.3;
+
+          &.active {
+            font-weight: variables.$medium;
+          }
+
+          &:last-child {
+            display: block;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+    }
+
+    &.active {
+      .header {
+        &__burger {
+          span {
+            &:first-child {
+              transform: rotate(45deg) translate(10px, 10px);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+              transform: translateX(-100%);
+            }
+            &:last-child {
+              transform: rotate(-45deg) translate(4px, -4px);
+            }
+          }
+        }
+      }
+
+      nav {
+        display: block;
+      }
+    }
   }
 }
