@@ -32,8 +32,13 @@
       line-height: 1;
     }
 
+    > p {
+      margin-bottom: variables.$md;
+    }
+
     .btn {
-      margin-top: variables.$md;
+      align-self: flex-start;
+      margin-top: auto;
     }
   }
 

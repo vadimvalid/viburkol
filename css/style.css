@@ -536,8 +536,12 @@ h5 {
   font-weight: 700;
   line-height: 1;
 }
+.card__item > p {
+  margin-bottom: 1rem;
+}
 .card__item .btn {
-  margin-top: 1rem;
+  align-self: flex-start;
+  margin-top: auto;
 }
 @media screen and (max-width: 767.98px) {
   .card__items {
