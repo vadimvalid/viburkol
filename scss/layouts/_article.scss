@@ -171,6 +171,8 @@
   }
 
   &.list {
+    padding-top: 0;
+
     h5 {
       margin-bottom: variables.$md;
       font-size: variables.$xs;

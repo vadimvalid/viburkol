@@ -538,6 +538,9 @@ sup {
     background: none;
   }
 }
+.section.list {
+  padding-top: 0;
+}
 .section.list h5 {
   margin-bottom: 1rem;
   font-size: 0.75rem;
