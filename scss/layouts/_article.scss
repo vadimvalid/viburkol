@@ -152,6 +152,23 @@
       background: none;
     }
   }
+
+  &.fifth {
+    background-image: url("../img/bg_second.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    > .container {
+      > img {
+        margin: 0 auto variables.$md;
+      }
+    }
+
+    @include mixins.sm-breakpoint {
+      background: none;
+    }
+  }
 }
 
 .schema {

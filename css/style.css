@@ -520,6 +520,20 @@ h5 {
     background: none;
   }
 }
+.section.fifth {
+  background-image: url("../img/bg_second.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section.fifth > .container > img {
+  margin: 0 auto 1rem;
+}
+@media screen and (max-width: 767.98px) {
+  .section.fifth {
+    background: none;
+  }
+}
 
 .schema__wrapper {
   position: relative;
