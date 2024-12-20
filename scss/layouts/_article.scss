@@ -310,3 +310,62 @@
     gap: variables.$md;
   }
 }
+
+.sixth {
+  h2 {
+    font-size: variables.$xl2;
+    font-weight: variables.$extraBold;
+    line-height: 1.3;
+    color: variables.$red;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$md;
+
+    > p {
+      font-weight: variables.$medium;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: mixins.torem(25);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: variables.$xs;
+    line-height: 1.5;
+    text-align: center;
+
+    h4 {
+      font-size: variables.$md;
+      font-weight: variables.$bold;
+    }
+  }
+
+  @include mixins.sm-breakpoint {
+    h2 {
+      font-size: variables.$xl;
+      line-height: 1.25;
+    }
+
+    &__items {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    &__item {
+      flex-direction: row;
+      align-items: center;
+      gap: variables.$xs;
+      text-align: left;
+    }
+  }
+}
