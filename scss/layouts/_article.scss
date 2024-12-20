@@ -32,4 +32,110 @@
       background: none;
     }
   }
+
+  &.second {
+    background-image: url("../img/bg_second.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .second {
+      &__wrapper {
+        display: flex;
+        gap: mixins.torem(48);
+
+        > div {
+          flex: 1;
+        }
+      }
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: mixins.torem(24);
+        padding: variables.$xl3;
+        border-radius: 30px;
+        background: variables.$white;
+        box-shadow: 0px 20px 30px 0px rgba(66, 72, 84, 0.2);
+
+        &__item {
+          display: flex;
+          align-items: center;
+          gap: variables.$md;
+
+          &__icon {
+            img {
+              width: mixins.torem(52);
+              height: mixins.torem(52);
+            }
+          }
+
+          &__content {
+            flex: 1;
+            font-size: variables.$sm;
+            font-weight: variables.$medium;
+
+            h3 {
+              font-size: variables.$xl2;
+              font-weight: variables.$medium;
+            }
+
+            strong {
+              font-weight: variables.$extraBold;
+            }
+          }
+        }
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$xl3;
+        font-size: variables.$sm;
+        line-height: 1.5;
+
+        strong {
+          font-weight: variables.$bold;
+        }
+      }
+    }
+
+    @include mixins.sm-breakpoint {
+      background: none;
+
+      .second {
+        &__wrapper {
+          flex-direction: column;
+          gap: variables.$xl3;
+        }
+
+        &__left {
+          padding: variables.$xl variables.$md;
+
+          &__item {
+            &__icon {
+              img {
+                width: mixins.torem(42);
+                height: mixins.torem(42);
+              }
+            }
+
+            &__content {
+              font-size: variables.$md;
+
+              h3 {
+                font-size: variables.$xl;
+              }
+            }
+          }
+        }
+
+        &__right {
+          gap: variables.$md;
+          font-size: variables.$md;
+        }
+      }
+    }
+  }
 }
