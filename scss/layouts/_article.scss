@@ -198,6 +198,7 @@
       a {
         text-decoration: underline;
         font-size: variables.$xs;
+        word-break: break-word;
       }
     }
   }
@@ -291,12 +292,23 @@
         font-size: variables.$xl;
       }
     }
+
+    &__image {
+      max-width: calc(100vw - 32px);
+      margin-top: variables.$xl;
+      overflow-x: scroll;
+
+      img {
+        min-width: 800px;
+        max-width: unset;
+      }
+    }
   }
 
   @media screen and (max-width: 520px) {
     &__title {
       position: relative;
-      padding: variables.$xl;
+      padding: variables.$xl3 variables.$xl2;
 
       > * {
         position: relative;

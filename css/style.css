@@ -96,7 +96,7 @@ textarea:not([rows]) {
   font-family: "Rubik";
   src: url("../fonts/Rubik.woff2") format("woff2");
   font-display: swap;
-  font-weight: 400 800;
+  font-weight: 300 800;
 }
 @font-face {
   font-family: "Caveat-Regular";
@@ -336,6 +336,92 @@ sup {
   }
 }
 
+.footer {
+  padding: 4rem 0;
+  border-radius: 64px 64px 0px 0px;
+  background: #ff6667;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #fff;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 13.125rem;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__logo p {
+  width: -webkit-max-content;
+  width: max-content;
+  margin-top: auto;
+}
+.footer__right {
+  display: flex;
+  gap: 4rem;
+  margin-left: auto;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__menu li {
+  width: -webkit-max-content;
+  width: max-content;
+  font-weight: 400;
+}
+.footer__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__text > p:nth-child(2) {
+  margin-top: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .footer {
+    padding: 2rem 0;
+    border-radius: 32px 32px 0 0;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer__logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .footer__logo img {
+    width: auto;
+    height: 28px;
+  }
+  .footer__right {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer__menu {
+    gap: 1.75rem;
+  }
+  .footer__menu li {
+    font-size: 1.125rem;
+  }
+  .footer__menu li a {
+    text-decoration: underline;
+  }
+  .footer__text {
+    gap: 1rem;
+  }
+  .footer__text p:first-child {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+}
+
 .hero {
   position: relative;
   padding: 8.625rem 0 2.375rem;
@@ -563,6 +649,7 @@ sup {
 .section.list li a {
   text-decoration: underline;
   font-size: 0.75rem;
+  word-break: break-word;
 }
 
 .schema__wrapper {
@@ -637,11 +724,20 @@ sup {
   .schema__title h2 {
     font-size: 1.5rem;
   }
+  .schema__image {
+    max-width: calc(100vw - 32px);
+    margin-top: 1.5rem;
+    overflow-x: scroll;
+  }
+  .schema__image img {
+    min-width: 800px;
+    max-width: unset;
+  }
 }
 @media screen and (max-width: 520px) {
   .schema__title {
     position: relative;
-    padding: 1.5rem;
+    padding: 2rem 1.875rem;
   }
   .schema__title > * {
     position: relative;
