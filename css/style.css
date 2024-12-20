@@ -426,6 +426,86 @@ h5 {
     background: none;
   }
 }
+.section.second {
+  background-image: url("../img/bg_second.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section.second .second__wrapper {
+  display: flex;
+  gap: 3rem;
+}
+.section.second .second__wrapper > div {
+  flex: 1;
+}
+.section.second .second__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 20px 30px 0px rgba(66, 72, 84, 0.2);
+}
+.section.second .second__left__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section.second .second__left__item__icon img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.section.second .second__left__item__content {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.section.second .second__left__item__content h3 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+.section.second .second__left__item__content strong {
+  font-weight: 800;
+}
+.section.second .second__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.section.second .second__right strong {
+  font-weight: 700;
+}
+@media screen and (max-width: 767.98px) {
+  .section.second {
+    background: none;
+  }
+  .section.second .second__wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section.second .second__left {
+    padding: 1.5rem 1rem;
+  }
+  .section.second .second__left__item__icon img {
+    width: 2.625rem;
+    height: 2.625rem;
+  }
+  .section.second .second__left__item__content {
+    font-size: 1rem;
+  }
+  .section.second .second__left__item__content h3 {
+    font-size: 1.5rem;
+  }
+  .section.second .second__right {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
 
 .card__items {
   display: -ms-grid;
@@ -437,7 +517,6 @@ h5 {
 .card__item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1rem;
   padding: 2rem;
   border-radius: 56px;
@@ -446,6 +525,11 @@ h5 {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.33;
+}
+.card__item__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .card__item h3 {
   font-size: 1.5rem;
@@ -466,6 +550,10 @@ h5 {
     border-radius: 32px;
     font-size: 1rem;
     line-height: 1.5;
+  }
+  .card__item__head {
+    flex-direction: row;
+    align-items: center;
   }
   .card__item .btn {
     width: 100%;
