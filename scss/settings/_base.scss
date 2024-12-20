@@ -76,8 +76,22 @@ h5 {
     height: mixins.torem(22);
   }
 
+  svg {
+    transition: all 0.3s ease;
+    path {
+      transition: all 0.3s ease;
+    }
+  }
+
   &:hover {
-    opacity: 0.8;
+    background: variables.$white;
+    color: variables.$mainColor;
+
+    svg {
+      path {
+        fill: variables.$red;
+      }
+    }
   }
 }
 
