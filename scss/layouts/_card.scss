@@ -19,6 +19,7 @@
     font-size: variables.$lg;
     font-weight: variables.$medium;
     line-height: 1.33;
+    transition: all 0.3s ease;
 
     &__head {
       display: flex;
@@ -39,6 +40,26 @@
     .btn {
       align-self: flex-start;
       margin-top: auto;
+    }
+
+    &:hover {
+      background: variables.$red;
+      color: variables.$white;
+
+      h3 {
+        color: variables.$white;
+      }
+
+      .btn {
+        background: variables.$white;
+        color: variables.$mainColor;
+
+        svg {
+          path {
+            fill: variables.$red;
+          }
+        }
+      }
     }
   }
 

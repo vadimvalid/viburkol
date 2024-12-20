@@ -58,6 +58,7 @@ h5 {
 }
 
 .btn {
+  all: unset;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,13 +72,28 @@ h5 {
   line-height: 1.71;
   color: variables.$white;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   span {
     height: mixins.torem(22);
   }
 
+  svg {
+    transition: all 0.3s ease;
+    path {
+      transition: all 0.3s ease;
+    }
+  }
+
   &:hover {
-    opacity: 0.8;
+    background: variables.$white;
+    color: variables.$mainColor;
+
+    svg {
+      path {
+        fill: variables.$red;
+      }
+    }
   }
 }
 
