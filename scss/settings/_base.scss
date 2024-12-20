@@ -58,6 +58,7 @@ h5 {
 }
 
 .btn {
+  all: unset;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +72,7 @@ h5 {
   line-height: 1.71;
   color: variables.$white;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   span {
     height: mixins.torem(22);

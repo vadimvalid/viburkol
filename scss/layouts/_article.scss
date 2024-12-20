@@ -238,6 +238,52 @@
       }
     }
   }
+
+  &.login {
+    > .container {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$md;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$xl;
+    width: 50%;
+
+    &-item {
+      input {
+        width: 100%;
+        padding: mixins.torem(10) variables.$xl3;
+        border: 1px solid variables.$red;
+        border-radius: 32px;
+        font-size: variables.$md;
+        line-height: 1;
+
+        &::placeholder {
+          color: rgba(58, 58, 64, 0.32);
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: variables.$xs variables.$xl3;
+
+      a {
+        font-weight: variables.$medium;
+        color: variables.$red;
+        text-decoration: underline;
+      }
+    }
+
+    @include mixins.sm-breakpoint {
+      width: 100%;
+    }
+  }
 }
 
 .schema {
