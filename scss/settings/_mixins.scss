@@ -1,16 +1,18 @@
+@use "variables";
+
 @function torem($value) {
   $remValue: calc($value / 16) + rem;
   @return $remValue;
 }
 
 @mixin md-breakpoint {
-  @media screen and (max-width: $mdBreakpoint) {
+  @media screen and (max-width: variables.$mdBreakpoint) {
     @content;
   }
 }
 
 @mixin sm-breakpoint {
-  @media screen and (max-width: $smBreakpoint) {
+  @media screen and (max-width: variables.$smBreakpoint) {
     @content;
   }
 }
@@ -30,21 +32,21 @@
 
 @mixin sectionShadow {
   border-radius: 18px;
-  background: $white;
+  background: variables.$white;
   box-shadow: 0px 0px 17.455px 0px rgba(0, 0, 0, 0.25);
 }
 
 @mixin sectionTitle {
   font-family: "Finlandica medium";
-  font-size: $xl;
-  color: $black;
+  font-size: variables.$xl;
+  color: variables.$black;
   font-weight: 500;
   opacity: 0.8;
   text-wrap: pretty;
   text-transform: uppercase;
 
   @include sm-breakpoint {
-    font-size: $lg;
+    font-size: variables.$lg;
   }
 }
 
@@ -63,7 +65,7 @@
 
     &::marker {
       font-size: torem(24);
-      color: $mainColor;
+      color: variables.$mainColor;
     }
   }
 }
