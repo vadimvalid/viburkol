@@ -201,7 +201,7 @@ h5 {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 0.875rem 1.875rem;
+  padding: 0.6875rem 1.875rem;
   border-radius: 32px;
   background: linear-gradient(272deg, #ffe1da 0.97%, #ffd3e8 43.25%, #f5ddff 86.42%);
 }
@@ -227,9 +227,11 @@ h5 {
 }
 
 .hero {
+  position: relative;
   padding: 8.625rem 0 2.375rem;
   border-radius: 0px 0px 60px 60px;
   background: linear-gradient(0deg, #ffb3a0 9.23%, #ffa79e 26.34%, #ff9cb3 41.61%, #ffa0cd 50.85%, #fd9ed9 60.95%, #d099e6 78.33%, #909dff 100.75%, #8799ff 102.78%);
+  overflow: hidden;
 }
 .hero__wrapper {
   display: flex;
@@ -242,7 +244,7 @@ h5 {
   flex-direction: column;
   font-family: "Caveat-Bold", cursive;
   font-size: 5.625rem;
-  line-height: 1;
+  line-height: 0.9;
 }
 .hero h1 span {
   font-family: "Caveat-Regular", cursive;
@@ -252,8 +254,22 @@ h5 {
 .hero__subtitle {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.3;
 }
 .hero__posttitle {
   font-size: 1.125rem;
   font-weight: 400;
+  line-height: 1.3;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("../img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 100%;
 }
