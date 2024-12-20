@@ -336,7 +336,10 @@ h5 {
   position: relative;
   padding: 8.625rem 0 2.375rem;
   border-radius: 0px 0px 60px 60px;
-  background: linear-gradient(0deg, #ffb3a0 9.23%, #ffa79e 26.34%, #ff9cb3 41.61%, #ffa0cd 50.85%, #fd9ed9 60.95%, #d099e6 78.33%, #909dff 100.75%, #8799ff 102.78%);
+  background-image: url("../img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 .hero__wrapper {
@@ -372,17 +375,14 @@ h5 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  background-image: url("../img/hero-bg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 100% 100%;
 }
 @media screen and (max-width: 767.98px) {
   .hero {
     padding: 2rem 0;
     border-radius: 0px 0px 32px 32px;
+    background: linear-gradient(0deg, #ffb3a0 9.23%, #ffa79e 26.34%, #ff9cb3 41.61%, #ffa0cd 50.85%, #fd9ed9 60.95%, #d099e6 78.33%, #909dff 100.75%, #8799ff 102.78%);
   }
   .hero__wrapper {
     gap: 2rem;
