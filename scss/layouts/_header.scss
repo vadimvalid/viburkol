@@ -1,84 +1,53 @@
-.header {
-  padding: torem(26) 0 torem(23);
+@use "./settings/_variables" as variables;
+@use "./settings/_mixins" as mixins;
 
-  .wrapper {
+.header {
+  position: absolute;
+  top: mixins.torem(32);
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: clamp(torem(36), 5vw, torem(84));
+    gap: variables.$xl2;
   }
 
-  &__logo {
-    flex-shrink: 0;
-    font-family: "Finlandica medium";
-    font-size: torem(25);
-    line-height: 1.14;
-  }
-
-  &__nav {
-    flex: 1;
-
+  nav {
     ul {
       display: flex;
-      flex-wrap: wrap;
-      gap: torem(10) clamp(torem(36), 5vw, torem(76));
+      align-items: center;
+      gap: variables.$xl;
+      padding: mixins.torem(14) mixins.torem(30);
+      border-radius: 32px;
+      background: variables.$gradient_2;
 
       li {
-        font-size: $sm;
-        line-height: 1.37;
-        color: $black;
-        letter-spacing: 0.2px;
-        transition: all 0.3s ease;
+        font-size: variables.$sm;
+        letter-spacing: 0.28px;
 
         a {
-          font-size: $sm;
-          line-height: 1.37;
-          color: $black;
-          letter-spacing: 0.2px;
-          transition: all 0.3s ease;
-
-          &:hover,
-          &:active {
-            color: $secondaryColor;
-          }
+          font-size: inherit;
+          color: inherit;
         }
 
         &.active {
-          a {
-            color: $secondaryColor;
-          }
-        }
-
-        &.disabled {
-          opacity: 0.5;
+          font-weight: variables.$bold;
         }
       }
     }
   }
 
-  &__burger {
+  &__btn {
     all: unset;
-    flex-shrink: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: torem(29);
-    height: torem(16);
+    align-items: center;
+    gap: variables.$xs;
+    font-size: variables.$sm;
+    font-weight: variables.$bold;
     cursor: pointer;
-
-    > span {
-      width: 100%;
-      height: torem(3);
-      background-color: $mainColor;
-      border-radius: 6px;
-    }
-  }
-
-  @include sm-breakpoint {
-    .wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: torem(20);
-    }
   }
 }

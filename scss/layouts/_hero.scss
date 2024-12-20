@@ -1,51 +1,49 @@
-.hero {
-  position: relative;
-  padding: torem(149) 0 torem(148);
-  background: radial-gradient(
-      101.79% 48.18% at 52.92% 94.32%,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    #4358c0;
+@use "./settings/_variables" as variables;
+@use "./settings/_mixins" as mixins;
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background-image: image-set(
-      url("../images/home/hero.webp") 1x,
-      url("../images/home/hero-2x.webp") 2x
-    );
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 65% bottom;
+.hero {
+  padding: mixins.torem(138) 0 mixins.torem(38);
+  border-radius: 0px 0px 60px 60px;
+  background: linear-gradient(
+    0deg,
+    #ffb3a0 9.23%,
+    #ffa79e 26.34%,
+    #ff9cb3 41.61%,
+    #ffa0cd 50.85%,
+    #fd9ed9 60.95%,
+    #d099e6 78.33%,
+    #909dff 100.75%,
+    #8799ff 102.78%
+  );
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$xl;
+    width: 50%;
   }
 
   h1 {
-    position: relative;
-    width: 55%;
-    margin: 0;
-    font-size: torem(45);
-    line-height: 1.2;
-    color: $white;
-    text-transform: uppercase;
-    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    font-family: "Caveat-Bold", cursive;
+    font-size: mixins.torem(90);
+    line-height: 1;
+
+    span {
+      font-family: "Caveat-Regular", cursive;
+      font-size: mixins.torem(64);
+      line-height: 1;
+    }
   }
 
-  @include sm-breakpoint {
-    padding: torem(60) 0 torem(80);
+  &__subtitle {
+    font-size: variables.$xl;
+    font-weight: variables.$bold;
+  }
 
-    h1 {
-      width: 100%;
-      font-size: torem(36);
-    }
-
-    &:after {
-      height: 50%;
-      background-position: right bottom;
-    }
+  &__posttitle {
+    font-size: variables.$lg;
+    font-weight: variables.$regular;
   }
 }

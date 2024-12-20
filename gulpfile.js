@@ -11,7 +11,7 @@ gulp.task("sass", function () {
   return gulp
     .src("./scss/**/*.scss")
     .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass({ silenceDeprecations: ["legacy-js-api"] }))
     .pipe(
       autoprefixer({
         cascade: false,
@@ -19,7 +19,7 @@ gulp.task("sass", function () {
       })
     )
     .pipe(gulp.dest("./css"))
-    .pipe(sourcemaps.write("."))
+    .pipe(sourcemaps.write("."));
 });
 
 // Convert ttf font to woff2

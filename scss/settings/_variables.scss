@@ -1,19 +1,33 @@
 // Colors
-$mainColor: #4358c1;
+$mainColor: #424854;
 $secondaryColor: #db790f;
-$black: #3d3d40;
+$black: #000;
 $grey: #e1e5e4;
 $white: #fff;
-$red: #e3483a;
+$red: #ff6667;
 $green: #009a35;
+$yellow: #ffa319;
+$gradient_2: linear-gradient(
+  272deg,
+  #ffe1da 0.97%,
+  #ffd3e8 43.25%,
+  #f5ddff 86.42%
+);
 
 // Font sizes
-$xs: 0.75rem;
-$sm: 0.875rem;
-$md: 1rem;
-$lg: 1.125rem;
-$xl: 2rem;
+$xs: 0.75rem; // 12
+$sm: 0.875rem; // 14
+$md: 1rem; // 16
+$lg: 1.125rem; // 18
+$xl: 1.5rem; // 24
+$xl2: 1.875rem; // 30
 
 // Breakpoints
 $smBreakpoint: 767.98px;
 $mdBreakpoint: 991.98px;
+
+// Font weights
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$extraBold: 800;

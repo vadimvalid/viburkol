@@ -34,15 +34,10 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.43.2",
-    "sass-migrator": "^1.5.2",
+    "sass": "^1.32.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0"
-  },
-  "dependencies": {
-    "bootstrap": "^5.1.3",
-    "popper.js": "^1.16.1"
   },
   "browserslist": [
     "last 1 version",
