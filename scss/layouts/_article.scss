@@ -280,8 +280,82 @@
       }
     }
 
+    &--registration {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: variables.$md 0;
+
+      h3 {
+        width: 100%;
+        font-size: variables.$xl;
+      }
+
+      > p {
+        width: 100%;
+        font-weight: variables.$medium;
+      }
+
+      .form-item {
+        width: calc(50% - variables.$xs);
+      }
+
+      .form {
+        &__checkboxes {
+          display: flex;
+          flex-direction: column;
+          gap: variables.$md;
+          width: 100%;
+          padding: mixins.torem(64) variables.$xl3;
+          border-radius: 30px;
+          background: variables.$white;
+          box-shadow: 0px 20px 30px 0px rgba(66, 72, 84, 0.2);
+
+          > p {
+            font-weight: variables.$medium;
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &__buttons {
+          margin-top: mixins.torem(8);
+        }
+      }
+
+      @include mixins.sm-breakpoint {
+        .form-item {
+          width: 100%;
+        }
+
+        .form {
+          &__checkboxes {
+            padding: variables.$xl3 variables.$xl;
+            border-radius: 24px;
+          }
+        }
+      }
+    }
+
     @include mixins.sm-breakpoint {
       width: 100%;
+    }
+  }
+
+  &.registration {
+    background-image: url("../img/bg_first.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h2 {
+      margin: 0;
+    }
+
+    @include mixins.sm-breakpoint {
+      background: none;
     }
   }
 }
