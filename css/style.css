@@ -1163,6 +1163,7 @@ sup {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-height: 21rem;
   padding: 2rem;
   border-radius: 56px;
   background: linear-gradient(0deg, #ffccbf 13.74%, #ffbbb4 44.68%, #feb2c4 64.86%, #ffb3d7 85.48%, #f5b3dc 97.95%);
