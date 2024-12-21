@@ -100,3 +100,50 @@ h5 {
 sup {
   font-size: mixins.torem(10);
 }
+
+.form {
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: variables.$md;
+
+    input {
+      appearance: none;
+      position: relative;
+      width: mixins.torem(24);
+      height: mixins.torem(24);
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: rgba(250, 250, 250, 1);
+      box-shadow: inset 0px 0px 36px -11px rgb(217 197 197 / 32%);
+      border-radius: 50%;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: mixins.torem(14);
+        height: mixins.torem(14);
+        background-color: variables.$red;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.3s ease;
+      }
+
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+
+    label {
+      flex: 1;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -260,10 +260,15 @@
         border: 1px solid variables.$red;
         border-radius: 32px;
         font-size: variables.$md;
+        font-weight: variables.$medium;
         line-height: 1;
 
         &::placeholder {
           color: rgba(58, 58, 64, 0.32);
+        }
+
+        &:disabled {
+          background: transparent;
         }
       }
     }
@@ -280,8 +285,226 @@
       }
     }
 
+    &--registration {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: variables.$md 0;
+
+      h3 {
+        width: 100%;
+        font-size: variables.$xl;
+      }
+
+      > p {
+        width: 100%;
+        font-weight: variables.$medium;
+      }
+
+      .form-item {
+        width: calc(50% - variables.$xs);
+      }
+
+      .form {
+        &__checkboxes {
+          display: flex;
+          flex-direction: column;
+          gap: variables.$md;
+          width: 100%;
+          padding: mixins.torem(64) variables.$xl3;
+          border-radius: 30px;
+          background: variables.$white;
+          box-shadow: 0px 20px 30px 0px rgba(66, 72, 84, 0.2);
+
+          > p {
+            font-weight: variables.$medium;
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &__buttons {
+          margin-top: mixins.torem(8);
+        }
+      }
+
+      .btn--save {
+        display: none;
+      }
+
+      @include mixins.sm-breakpoint {
+        .form-item {
+          width: 100%;
+        }
+
+        .form {
+          &__checkboxes {
+            padding: variables.$xl3 variables.$xl;
+            border-radius: 24px;
+          }
+        }
+      }
+    }
+
     @include mixins.sm-breakpoint {
       width: 100%;
+    }
+  }
+
+  &.registration {
+    background-image: url("../img/bg_first.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h2 {
+      margin: 0;
+    }
+
+    @include mixins.sm-breakpoint {
+      background: none;
+    }
+  }
+
+  &.profile {
+    background-image: url("../img/bg_3.png");
+
+    @include mixins.sm-breakpoint {
+      background: none;
+    }
+  }
+
+  &.history {
+    padding: mixins.torem(64) 0;
+    border-radius: 60px;
+    background: variables.$gradient;
+
+    .history {
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$xl3;
+      }
+
+      &__title {
+        font-size: variables.$xl;
+        font-weight: variables.$bold;
+        line-height: 1;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: variables.$md variables.$xl3;
+        min-height: mixins.torem(56);
+
+        &__type {
+          min-width: mixins.torem(94);
+          font-size: variables.$sm;
+          font-weight: variables.$bold;
+          line-height: 1.28;
+        }
+
+        &__text {
+          position: relative;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: mixins.torem(8);
+          font-size: variables.$xs;
+          line-height: 1.66;
+
+          h3 {
+            font-size: variables.$md;
+            font-weight: variables.$medium;
+            line-height: 1.5;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -16px;
+            width: 2px;
+            height: 100%;
+            background: variables.$mainColor;
+          }
+        }
+
+        &__button {
+          margin-left: auto;
+
+          .btn {
+            background: variables.$white;
+            color: variables.$mainColor;
+
+            &:hover {
+              background: variables.$red;
+              color: variables.$white;
+
+              svg {
+                path {
+                  fill: variables.$white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include mixins.sm-breakpoint {
+      padding: variables.$xl3 0;
+      border-radius: 40px;
+
+      .history {
+        &__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: variables.$xl3;
+        }
+
+        &__title {
+          font-size: variables.$xl;
+          font-weight: variables.$bold;
+          line-height: 1;
+        }
+
+        &__item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: variables.$md variables.$xl;
+
+          &__type {
+            position: relative;
+            display: inline-block;
+            min-width: unset;
+            padding-bottom: variables.$md;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: variables.$mainColor;
+            }
+          }
+
+          &__text {
+            &:before {
+              display: none;
+            }
+          }
+
+          &__button {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }
