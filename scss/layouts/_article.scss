@@ -507,6 +507,19 @@
       }
     }
   }
+
+  &.podcast {
+    padding: mixins.torem(64) 0;
+    background-image: url("../img/bg_first.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mixins.sm-breakpoint {
+      padding: variables.$xl3 0;
+      background: none;
+    }
+  }
 }
 
 .schema {

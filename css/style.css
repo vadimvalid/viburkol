@@ -186,6 +186,7 @@ h5 {
 
 .btn {
   all: unset;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -961,6 +962,19 @@ sup {
     margin-left: 0;
   }
 }
+.section.podcast {
+  padding: 4rem 0;
+  background-image: url("../img/bg_first.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 767.98px) {
+  .section.podcast {
+    padding: 2rem 0;
+    background: none;
+  }
+}
 
 .schema__wrapper {
   position: relative;
@@ -1169,7 +1183,13 @@ sup {
   line-height: 1;
 }
 .card__item > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3125rem;
   margin-bottom: 1rem;
+}
+.card__item > p span {
+  font-weight: 400;
 }
 .card__item .btn {
   align-self: flex-start;

@@ -34,7 +34,14 @@
     }
 
     > p {
+      display: flex;
+      flex-wrap: wrap;
+      gap: mixins.torem(5);
       margin-bottom: variables.$md;
+
+      span {
+        font-weight: variables.$regular;
+      }
     }
 
     .btn {
