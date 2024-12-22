@@ -520,6 +520,38 @@
       background: none;
     }
   }
+
+  &.video {
+    padding: mixins.torem(64) 0;
+
+    > .container {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$xl3;
+
+      h2 {
+        font-size: variables.$xl;
+        line-height: 1.3;
+      }
+
+      iframe,
+      video {
+        width: 100%;
+        height: auto;
+        border-radius: 32px;
+        overflow: hidden;
+        aspect-ratio: 5 / 3;
+      }
+    }
+
+    @include mixins.sm-breakpoint {
+      padding: variables.$xl3 0;
+
+      > .container {
+        gap: variables.$xl;
+      }
+    }
+  }
 }
 
 .schema {
@@ -728,6 +760,145 @@
       align-items: center;
       gap: variables.$xs;
       text-align: left;
+    }
+  }
+}
+
+.video {
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: variables.$xl3;
+
+    &__image {
+      width: mixins.torem(118);
+      height: mixins.torem(118);
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__name {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$xs;
+      font-weight: variables.$medium;
+
+      h4 {
+        font-size: variables.$xl;
+        font-weight: variables.$bold;
+        line-height: 1;
+        color: variables.$red;
+      }
+    }
+  }
+
+  &__description {
+    padding: mixins.torem(64) variables.$xl3;
+    border-radius: 30px;
+    background: variables.$white;
+    box-shadow: 0px 20px 30px 0px rgba(66, 72, 84, 0.2);
+    font-weight: variables.$medium;
+
+    h5 {
+      margin: 0;
+      font-size: variables.$md;
+      font-weight: variables.$bold;
+    }
+
+    p {
+      + h5 {
+        margin-top: variables.$xl;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding-left: variables.$xl;
+      list-style-type: disc;
+
+      li {
+        list-style-type: inherit;
+      }
+    }
+  }
+
+  &__quizz {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$md;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$md;
+      padding: mixins.torem(64);
+      padding-bottom: mixins.torem(200);
+      border-radius: 32px;
+      background: variables.$gradient;
+
+      h3 {
+        font-size: variables.$xl;
+        line-height: 1.2;
+      }
+
+      + .btn {
+        align-self: center;
+      }
+    }
+
+    &__checkboxes {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$xl3;
+      margin-top: auto;
+      padding-top: mixins.torem(115);
+
+      .form__checkbox {
+        font-size: variables.$lg;
+        font-weight: variables.$medium;
+      }
+    }
+  }
+
+  @include mixins.sm-breakpoint {
+    &__author {
+      gap: variables.$xl;
+
+      &__image {
+        width: mixins.torem(64);
+        height: mixins.torem(64);
+      }
+    }
+
+    &__description {
+      padding: variables.$xl3 variables.$md;
+      border-radius: 24px;
+    }
+
+    &__quizz {
+      &__wrapper {
+        padding: variables.$xl3;
+        padding-bottom: mixins.torem(100);
+        border-radius: 24px;
+
+        h3 {
+          font-size: variables.$lg;
+        }
+      }
+
+      &__checkboxes {
+        gap: variables.$xl;
+        padding-top: mixins.torem(64);
+
+        .form__checkbox {
+          font-size: variables.$md;
+        }
+      }
     }
   }
 }
